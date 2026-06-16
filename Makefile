@@ -1,6 +1,6 @@
 draft := draft-pamtv-netconf-error-registries
 REV := $(shell git tag | tail -n1 | sed '$$!d; s/$(draft)-//')
-latest := $(shell [ x"$(REV)" = "x" ] && echo "00" || echo "$(( $(REV) + 1 ))")
+latest := $(shell [ x"$(REV)" = "x" ] && echo "00" || printf "%02d\n" "$$(( $(REV) + 1 ))")
 
 .PHONY: all clean latest
 
@@ -15,4 +15,4 @@ $(draft)-$(latest).txt: $(draft)-$(latest).xml
 	kramdown-rfc --v3 $< | sed "s/$(draft)-latest/$(draft)-$(latest)/" > $@
 
 clean:
-	rm -f $(draft)-$(latest).*
+	rm -f $(draft)-*.*
