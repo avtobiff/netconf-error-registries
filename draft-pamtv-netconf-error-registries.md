@@ -1,6 +1,6 @@
 ---
-title: "NETCONF Error List and Error Identities Registries"
-abbrev: "NETCONF Error Registries"
+title: "Error List and Error Identities Registries for YANG-driven protocols"
+abbrev: "YANG Procotol Error Registries"
 category: std
 
 docname: draft-pamtv-netconf-error-registries-latest
@@ -27,6 +27,7 @@ author:
 normative:
   RFC5226:
   RFC6241:
+  RFC8040:
   RFC8639:
   RFC8641:
 
@@ -36,17 +37,18 @@ informative:
 
 --- abstract
 
-This document defines IANA registries for the NETCONF Error List and NETCONF
-Error Identities.
+This document defines IANA registries for the YANG Protocol Error List and
+YANG Protocol Error Identities.
 
 
 --- middle
 
 # Introduction
 
-In order to have a canonical source for all NETCONF Error and NETCONF Error
-Identities, two IANA registries are defined. These registries can be extended
-and updated as needed.
+In order to have a canonical source for all errors and error identities for
+YANG-driven procotols such as NETCONF {{RFC6241}} and RESTCONF {{RFC8040}},
+two IANA registries are defined: YANG Protocol Error List and YANG Protocol
+Error Identities. These registries can be extended and updated as needed.
 
 It is an advantage for protocol evolution to have canonical sources to extend,
 instead of a set of documents that need to be compiled and referenced.
@@ -58,12 +60,12 @@ instead of a set of documents that need to be compiled and referenced.
 
 # IANA Considerations
 
-## NETCONF Error List Registry
+## YANG Protocol Error List Registry
 
-This document defines a registry for the NETCONF Error List defined in
-Appendix A of {{RFC6241}}. The name of the registry is "NETCONF Error List".
-The review policy for this registry is "IETF Review" {{RFC5226}}. The registry
-shall record the following for each entry:
+This document defines a registry for the YANG Protocol Error List defined in
+Appendix A of {{RFC6241}}. The name of the registry is "YANG Protocol Error
+List". The review policy for this registry is "IETF Review" {{RFC5226}}. The
+registry shall record the following for each entry:
 
 - error-tag, TBD
 - error-type, TBD
@@ -116,12 +118,12 @@ Description:    An attribute value is not correct; e.g., wrong type,
 ~~~
 
 
-## NETCONF Error Identities
+## YANG Protocol Error Identities Registry
 
-This document defines a registry for NETCONF Error Identities. The name of the
-registry is "NETCONF Error Identities". The review policy for this registry is
-"IETF Review" {{RFC5226}}. The registry shall record the following for each
-entry:
+This document defines a registry for YANG Protocol Error Identities. The name
+of the registry is "YANG Protocol Error Identities". The review policy for
+this registry is "IETF Review" {{RFC5226}}. The registry shall record the
+following for each entry:
 
 - Identity name.
 - Base identity, if applicable.
