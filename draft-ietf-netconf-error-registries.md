@@ -3,7 +3,7 @@ title: "Error List and Error Identities Registries for YANG-driven protocols"
 abbrev: "YANG Procotol Error Registries"
 category: std
 
-docname: draft-pamtv-netconf-error-registries-latest
+docname: draft-ietf-netconf-error-registries-latest
 submissiontype: IETF
 number:
 date:
