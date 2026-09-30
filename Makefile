@@ -1,5 +1,5 @@
 draft := draft-ietf-netconf-error-registries
-REV := $(shell git tag | tail -n1 | sed '$$!d; s/$(draft)-//')
+REV := $(shell git tag | grep $(draft) | tail -n1 | sed '$$!d; s/$(draft)-//')
 latest := $(shell [ x"$(REV)" = "x" ] && echo "00" || printf "%02d\n" "$$(( $(REV) + 1 ))")
 
 .PHONY: all clean latest
