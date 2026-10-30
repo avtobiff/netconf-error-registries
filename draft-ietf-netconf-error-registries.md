@@ -30,6 +30,7 @@ normative:
   RFC8040:
   RFC8639:
   RFC8641:
+  RFC8783:
 
 informative:
 
@@ -271,6 +272,15 @@ Description:    A message could not be handled because it failed to
                 This error-tag is new in :base:1.1 and MUST NOT be
                 sent to old clients.
 Reference:      RFC 6241
+
+error-tag:      operation-failed
+error-app-tag:  loop-detected
+error-type:     transport, application
+error-info:     <via-header> : A copy of the Via header field when
+                the loop was detected.
+Description:    An infinite loop has been detected when forwarding
+                a requests via a proxy.
+Reference:      RFC 8783
 ~~~
 
 
