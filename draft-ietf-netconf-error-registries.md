@@ -25,9 +25,9 @@ author:
     email: mithun.ietf@gmail.com
 
 normative:
-  RFC5226:
   RFC6241:
   RFC8040:
+  RFC8126:
   RFC8639:
   RFC8641:
   RFC8783:
@@ -65,7 +65,7 @@ instead of a set of documents that need to be compiled and referenced.
 
 This document defines a registry for the YANG Protocol Error List defined in
 Appendix A of {{RFC6241}}. The name of the registry is "YANG Protocol Error
-List". The review policy for this registry is "IETF Review" {{RFC5226}}. The
+List". The review policy for this registry is "IETF Review" {{RFC8126}}. The
 registry shall record the following for each entry:
 
 - error-tag, mandatory
@@ -288,7 +288,7 @@ Reference:      RFC 8783
 
 This document defines a registry for YANG Protocol Error Identities. The name
 of the registry is "YANG Protocol Error Identities". The review policy for
-this registry is "IETF Review" {{RFC5226}}. The registry shall record the
+this registry is "IETF Review" {{RFC8126}}. The registry shall record the
 following for each entry:
 
 - Identity name.
